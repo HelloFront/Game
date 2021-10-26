@@ -1,0 +1,208 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: radial-gradient(#684e85, #1c003b);
+    height: 100vh;
+    color: rgb(187, 187, 187);
+    font-size: 18px;
+    font-family: 'Balsamiq Sans', cursive;
+    font-weight: 400;
+}
+.wrapper {
+    margin: 0 auto;
+
+    width: 70%;
+}
+
+/* ----- Header ------ */
+
+header {
+    padding: 5px 200px;
+    background: radial-gradient(40% 50%, #341458, #1c003b);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-radius: 0 0 5px 5px;
+}
+.header_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info {
+    display: flex;
+    align-items: center;
+}
+.name:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+.first_link {
+    margin: 0 7px 0 15px;
+}
+svg {
+    fill: #555B6E;
+    width: 30px;
+    height: 30px;
+}
+svg:hover {
+    fill: rgb(144, 144, 144);
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+/* ----- Header End ------ */
+
+/* ----- Main ------ */
+main {
+    margin-top: 150px;
+    padding: 20px 0 0;
+    
+    position: relative;
+}
+.info_rules {
+    margin: 0 auto;
+    padding: 50px 30px 30px;
+
+    width: 60%;
+    line-height: 25px;
+    text-align: center;
+    background: url(https://kartinkin.net/uploads/posts/2021-07/thumbs/1626284727_21-kartinkin-com-p-fon-temno-sinii-gradient-krasivo-22.jpg);
+    background-size: cover;
+    border: 3px solid #7d85a1;
+    border-radius: 25px;
+}
+main::before {
+    padding: 5px 20px;
+    position: absolute;
+    content: 'Кто хочет стать Миллионером!';
+    font-weight: 700;
+    top: 4px;
+    left: 26%;
+    background: rgb(10, 1, 58);
+    border: 3px solid #7d85a1;
+    border-radius: 8px;
+}
+.status {
+    margin: 60px auto 20px;
+    padding: 10px 20px;
+
+    width: 60%;
+    text-align: center;
+    font-size: 30px;
+    background: url(https://st3.depositphotos.com/2777985/i/600/depositphotos_348321362-stock-photo-dark-blue-texture-chalk-board.jpg);
+    border: 3px solid #7d85a1;
+    border-radius: 20px;
+}
+.button_control {
+    margin: 0 auto;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button_control::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    top: 46px;
+    background-color: #7d85a1;
+    z-index: 1;
+}
+.button_control::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    top: 112px;
+    background-color: #7d85a1;
+    z-index: 1;
+}
+.control_top, .control_bottom {
+    width: 25%;
+
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+.button {
+    margin: 10px 0;
+    padding: 0 10px;
+    width: 90%;
+    min-height: 46px;
+    
+    position: relative;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left;
+    background: url(https://st3.depositphotos.com/2777985/i/600/depositphotos_348321362-stock-photo-dark-blue-texture-chalk-board.jpg);
+    color: #e2e2e2;
+    border: none;
+    border-top: 3px solid #7d85a1;
+    border-bottom: 3px solid #7d85a1;
+    border-radius: 3px;
+}
+.button::after{
+    border: 22px solid transparent;
+    border-left: 20px solid #7d85a1;
+    content: '';
+    position: absolute;
+    right: -41px;
+    top: -2px;
+}
+.button::before{
+    border: 22px solid transparent;
+    border-right: 20px solid #7d85a1;;
+    content: '';
+    position: absolute;
+    left: -41px;
+    top: -2px;
+}
+.hover2:hover + .button {
+    border-top-color: darkgoldenrod;
+    border-bottom-color:darkgoldenrod;
+    transition: .2s linear;
+}
+.hover1:hover + .button {
+    border-top-color: darkgoldenrod;
+    border-bottom-color:darkgoldenrod;
+    transition: .2s linear;
+}
+.button:hover .dot {
+    background-color: rgb(195, 195, 195);
+    transition: all .2s linear;
+}
+.yellow {
+    color: darkgoldenrod;
+    font-size: 18px;
+}
+.dot {
+    display: inline-block;
+    margin-right: 4px;
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+    background-color: darkgoldenrod;
+}
+.hover1 {
+    position: absolute;
+    width: 21%;
+    top: 90px;
+    min-height: 46px;
+    z-index: 15;
+    cursor: pointer;
+}
+.hover2 {
+    position: absolute;
+    width: 21%;
+    top: 25px;
+    min-height: 46px;
+    z-index: 15;
+    cursor: pointer;
+}
