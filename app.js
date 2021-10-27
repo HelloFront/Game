@@ -20,17 +20,15 @@ function startGame () {
         outAnswer[i].innerHTML = arrAnswer[i];
     }
     for (let i = 0; i < button.length; i++) {
-        button[i].addEventListener('click', checkedAnswer);
+        button[i].addEventListener('click', checkedAnswer(outAnswer));
     }
 }
 
 function aboutGame () {
 
 }
-function checkedAnswer (outAnswer, trueAnswer) {
-    for (let i = 0; i < outAnswer.length; i++) {
-        console.log(outAnswer)
-    }
+function checkedAnswer () {
+   
 }
 
 
