@@ -24,12 +24,6 @@ function startGame () {
     }
 }
 
-function aboutGame () {
-
-}
-function checkedAnswer () {
-   
-}
 
 
 
