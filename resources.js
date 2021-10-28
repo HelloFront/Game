@@ -1,5 +1,5 @@
 const question1 = createQuestion('Какой язык является мультипарадигменным?',
-    ' C++', ' JavaScript', ' Python', ' Java', ' JavaScript' );
+    ' C++', ' JavaScript', ' Python', ' Java', 'JavaScript' );
 
 // let question1 = createQuestion('Какой язык является мультипарадигменным?',
 //     'a) C++\nb) JavaScript\nc) Python\nd) Java','b' );

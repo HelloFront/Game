@@ -1,29 +1,35 @@
-const button = [...document.querySelectorAll('.out')];
+const button = [...document.querySelectorAll('[data-button]')];
 
 let outStatus = document.querySelector('.status');
 let outQuestion = document.querySelector('.question');
-let outAnswer = [...document.querySelectorAll('.outAnswer')];
 
 let arrAnswer = question1.arrAnswer;
 
-let index = 1;
+let index = 0;
 
 button[0].addEventListener('click', startGame);
-button[1].addEventListener('click', aboutGame);
-
+// button[1].addEventListener('click', aboutGame);
 
 function startGame () {
-    outStatus.innerHTML = 'Вопрос ' + index;
-    outQuestion.innerHTML = question1.question;
+    button[0].removeEventListener('click', startGame);
 
-    for (let i = 0; i < arrAnswer.length; i++) {
-        outAnswer[i].innerHTML = arrAnswer[i];
-    }
+    outStatus.innerText = 'Вопрос ' + ++index ;
+    outQuestion.innerText = question1.question;
+
     for (let i = 0; i < button.length; i++) {
-        button[i].addEventListener('click', checkedAnswer(outAnswer));
+        button[i].innerText = arrAnswer[i];
+        button[i].addEventListener('click', checkedAnswer);
     }
 }
 
+function checkedAnswer () {
+    let x = this.innerText;
+    if (x === question1.trueAnswer) {
+        outStatus.innerText = 'Ответ правильный!';
+    } else {
+        outStatus.innerText = 'Ответ не правильный!';
+    }
+}
 
 
 
