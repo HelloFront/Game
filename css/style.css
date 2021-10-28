@@ -146,6 +146,7 @@ main::before {
     border-top: 3px solid #7d85a1;
     border-bottom: 3px solid #7d85a1;
     border-radius: 3px;
+    cursor: pointer;
 }
 .button::after{
     border: 22px solid transparent;
@@ -162,47 +163,4 @@ main::before {
     position: absolute;
     left: -41px;
     top: -2px;
-}
-.hover2:hover + .button {
-    border-top-color: darkgoldenrod;
-    border-bottom-color:darkgoldenrod;
-    transition: .2s linear;
-}
-.hover1:hover + .button {
-    border-top-color: darkgoldenrod;
-    border-bottom-color:darkgoldenrod;
-    transition: .2s linear;
-}
-.button:hover .dot {
-    background-color: rgb(195, 195, 195);
-    transition: all .2s linear;
-}
-.yellow {
-    color: darkgoldenrod;
-    font-size: 18px;
-}
-.dot {
-    display: inline-block;
-    margin-right: 4px;
-    width: 14px;
-    height: 14px;
-
-    border-radius: 50%;
-    background-color: darkgoldenrod;
-}
-.hover1 {
-    position: absolute;
-    width: 21%;
-    top: 90px;
-    min-height: 46px;
-    z-index: 15;
-    cursor: pointer;
-}
-.hover2 {
-    position: absolute;
-    width: 21%;
-    top: 25px;
-    min-height: 46px;
-    z-index: 15;
-    cursor: pointer;
 }
