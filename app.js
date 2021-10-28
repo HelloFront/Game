@@ -25,7 +25,7 @@ function checkedAnswer () {
     if (x === question[index].trueAnswer) {
         outStatus.innerText = 'Ответ правильный!';
         index++
-        startGame()
+        setTimeout(startGame, 500)
     } else {
         outStatus.innerText = 'Ответ не правильный!';
     }
