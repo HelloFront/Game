@@ -78,9 +78,9 @@ function checkedAnswer () {
 
     } else {
 
-        if(index >= 4 && index < 9) {
+        if(index >= 5 && index < 10) {
             outBalanceLose.innerText = 'Вы выиграли 1000$';
-        } else if(index >= 9 && index < 14) {
+        } else if(index >= 10 && index < 15) {
             outBalanceLose.innerText = 'Вы выиграли 32000$';
         } else {
             outBalanceLose.innerText = 'Вы ничего не выиграли';
