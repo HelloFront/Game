@@ -13,7 +13,7 @@ let outBalanceWin = document.querySelector('.out__money__win');
 let outBalanceLose = document.querySelector('.out__money__lose');
 
 let balance = 0;
-let index = 5;
+let index = 0;
 
 button[0].addEventListener('click', startGame);
 // button[1].addEventListener('click', aboutGame);
@@ -34,29 +34,50 @@ function startGame () {
 function checkedAnswer () {
     let x = this.innerText;
     if (x === question[index].trueAnswer) {
+        index++
+
         winWindow.style = 'display: block';
         body.style = 'opacity: .2'
         
         balance = countBalance();
-        outBalanceWin.innerText = `Вы выиграли ${balance}$`;
+        
+        if (index === 15) {
+            outBalanceWin.innerText = `Вы победитель и обладатель ${balance}$ Congratulations!`;
 
-        index++
+            buttonContinue.addEventListener('click', function () {
+                winWindow.style = 'display: none';
+                body.style = 'opacity: 1';
 
-        buttonContinue.addEventListener('click', function () {
-            winWindow.style = 'display: none';
-            body.style = 'opacity: 1';
+                gameOver();
+            });
 
-            startGame();
-        });
+            buttonExit.addEventListener('click', function () {
+                winWindow.style = 'display: none';
+                body.style = 'opacity: 1';
 
-        buttonExit.addEventListener('click', function () {
-            winWindow.style = 'display: none';
-            body.style = 'opacity: 1';
+                gameOver();
+            });
 
-            gameOver();
-        });
+        } else {
+            outBalanceWin.innerText = `Вы выиграли ${balance}$`;
+
+            buttonContinue.addEventListener('click', function () {
+                winWindow.style = 'display: none';
+                body.style = 'opacity: 1';
+
+                startGame();
+            });
+
+            buttonExit.addEventListener('click', function () {
+                winWindow.style = 'display: none';
+                body.style = 'opacity: 1';
+
+                gameOver();
+            });
+        }
 
     } else {
+
         if(index >= 4 && index < 9) {
             outBalanceLose.innerText = 'Вы выиграли 1000$';
         } else if(index >= 9 && index < 14) {
@@ -91,19 +112,20 @@ function gameOver () {
     }
 
     index = 0;
+    balance = 0;
 }
 
 function countBalance () {
 
-    if(index < 3) {
+    if(index < 4) {
         balance += 100;
-    } else if (index === 3) {
+    } else if (index === 4) {
         balance += 200;
-    } else if (index > 3 && index < 11) {
+    } else if (index > 4 && index < 12) {
         balance *= 2;
-    } else if (index === 11) {
+    } else if (index === 12) {
         balance = 125000;
-    } else if (index > 11 && index <= 14){
+    } else if (index > 12 && index <= 15){
         balance *= 2;
     }
 
