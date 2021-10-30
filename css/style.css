@@ -153,7 +153,7 @@ main::before {
     cursor: pointer;
     transition: all .2s linear;
 }
-.button.active {
+.active:hover {
     border-color: rgb(255, 174, 0);
 }
 .button::after{

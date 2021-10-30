@@ -15,18 +15,10 @@ let outBalanceLose = document.querySelector('.out__money__lose');
 let balance = 0;
 let index = 0;
 
-for (let i = 0; i < button.length; i++) {
-    if(typeof(button[i].onclick) === 'function') {
-        button[i].addEventListener('mouseover', function () {
-            button[i].classList.add('active');
-            button[i].addEventListener('mouseout', function () {
-                button[i].classList.remove('active');
-            })
-        })
-    }
-}
+checkedButton();
 
 function startGame () {
+
     button[0].removeEventListener('click', startGame);
     let arrAnswer = question[index].arrAnswer;
 
@@ -36,13 +28,7 @@ function startGame () {
     for (let i = 0; i < button.length; i++) {
         button[i].innerText = arrAnswer[i];
         button[i].addEventListener('click', checkedAnswer);
-
-        button[i].addEventListener('mouseover', function () {
-            button[i].classList.add('active');
-            button[i].addEventListener('mouseout', function () {
-                button[i].classList.remove('active');
-            })
-        })
+        button[i].classList.add('active');
     }
 }
 
@@ -119,13 +105,10 @@ function gameOver () {
 
     for (let i = 0; i < button.length; i++) {
         button[i].removeEventListener('click', checkedAnswer);
-    }
-    button[0].addEventListener('click', startGame);
-
-    for (let i = 0; i < button.length; i++) {
         button[i].innerText = arrControl[i];
+        button[i].classList.remove('active')
     }
-
+    
     index = 0;
     balance = 0;
 }
@@ -145,4 +128,17 @@ function countBalance () {
     }
 
     return balance;
+}
+
+function checkedButton () {
+    for (let i = 0; i < button.length; i++) {
+        if(typeof(button[i].onclick) === 'function') {
+            button[i].addEventListener('mouseover', function () {
+                button[i].classList.add('active');
+                button[i].addEventListener('mouseout', function () {
+                    button[i].classList.remove('active');
+                })
+            })
+        }
+    }
 }
