@@ -135,7 +135,7 @@ main::before {
     z-index: 10;
 }
 .button {
-    margin: 10px 0;
+    margin: 10px auto;
     padding: 0 10px;
     width: 90%;
     min-height: 46px;
