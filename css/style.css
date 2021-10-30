@@ -151,6 +151,10 @@ main::before {
     border-bottom: 3px solid #7d85a1;
     border-radius: 3px;
     cursor: pointer;
+    transition: all .2s linear;
+}
+.button:hover {
+    border-color: rgb(255, 174, 0);
 }
 .button::after{
     border: 22px solid transparent;
@@ -209,4 +213,8 @@ main::before {
     border-bottom: 3px solid #7d85a1;
     border-radius: 3px;
     cursor: pointer;
+    transition: all .2s linear;
+}
+.btn__confirm:hover {
+    border-color: rgb(255, 174, 0);
 }
