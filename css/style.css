@@ -153,7 +153,7 @@ main::before {
     cursor: pointer;
     transition: all .2s linear;
 }
-.button:hover {
+.button.active {
     border-color: rgb(255, 174, 0);
 }
 .button::after{
@@ -214,7 +214,4 @@ main::before {
     border-radius: 3px;
     cursor: pointer;
     transition: all .2s linear;
-}
-.btn__confirm:hover {
-    border-color: rgb(255, 174, 0);
 }

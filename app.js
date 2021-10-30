@@ -15,8 +15,16 @@ let outBalanceLose = document.querySelector('.out__money__lose');
 let balance = 0;
 let index = 0;
 
-button[0].addEventListener('click', startGame);
-// button[1].addEventListener('click', aboutGame);
+for (let i = 0; i < button.length; i++) {
+    if(typeof(button[i].onclick) === 'function') {
+        button[i].addEventListener('mouseover', function () {
+            button[i].classList.add('active');
+            button[i].addEventListener('mouseout', function () {
+                button[i].classList.remove('active');
+            })
+        })
+    }
+}
 
 function startGame () {
     button[0].removeEventListener('click', startGame);
@@ -28,6 +36,13 @@ function startGame () {
     for (let i = 0; i < button.length; i++) {
         button[i].innerText = arrAnswer[i];
         button[i].addEventListener('click', checkedAnswer);
+
+        button[i].addEventListener('mouseover', function () {
+            button[i].classList.add('active');
+            button[i].addEventListener('mouseout', function () {
+                button[i].classList.remove('active');
+            })
+        })
     }
 }
 
