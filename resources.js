@@ -1,3 +1,6 @@
+const arrControl = ['Играть', 'Об игре', 'Правила', 'Выход']
+const infoGame = document.querySelector('.question').innerText;
+
 const question1 = createQuestion('Какой язык является мультипарадигменным?',
 ' C++', ' JavaScript', ' Python', ' Java', 'JavaScript' );
 const question2 = createQuestion('Как называется разработчик которий работает над клиентской стороной проекта?',
