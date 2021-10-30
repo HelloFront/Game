@@ -215,3 +215,6 @@ main::before {
     cursor: pointer;
     transition: all .2s linear;
 }
+.btn__confirm:hover {
+    border-color: rgb(255, 174, 0);
+}
