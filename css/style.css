@@ -11,6 +11,10 @@ body {
     font-family: 'Balsamiq Sans', cursive;
     font-weight: 400;
 }
+.body {
+    opacity: 1;
+    transition: all .2s linear;
+}
 .wrapper {
     margin: 0 auto;
 
@@ -163,4 +167,42 @@ main::before {
     position: absolute;
     left: -41px;
     top: -2px;
+}
+
+
+
+
+.window {
+    width: 100%;
+    padding: 15px 20px;
+
+    position: absolute;
+    top: 320px;
+    opacity: 1;
+    font-size: 40px;
+    text-align: center;
+    background: url(https://kartinkin.net/uploads/posts/2021-07/thumbs/1626284727_21-kartinkin-com-p-fon-temno-sinii-gradient-krasivo-22.jpg);
+    background-size: cover;
+    border-top: 3px solid #7d85a1;
+    border-bottom: 3px solid #7d85a1;
+    z-index: 20;
+    display: none;
+    transition: all .1s linear;
+}
+.btn__confirm {
+    margin: 10px 0;
+    padding: 0 10px;
+    width: 10%;
+    min-height: 46px;
+    
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    background: url(https://st3.depositphotos.com/2777985/i/600/depositphotos_348321362-stock-photo-dark-blue-texture-chalk-board.jpg);
+    color: #e2e2e2;
+    border: none;
+    border-top: 3px solid #7d85a1;
+    border-bottom: 3px solid #7d85a1;
+    border-radius: 3px;
+    cursor: pointer;
 }
