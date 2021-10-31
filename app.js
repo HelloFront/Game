@@ -19,7 +19,6 @@ checkedButton();
 
 function startGame () {
 
-    button[0].removeEventListener('click', startGame);
     let arrAnswer = question[index].arrAnswer;
 
     outStatus.innerText = 'Вопрос ' + (index+1) ;

@@ -1,0 +1,24 @@
+@media screen and (max-width: 600px) {
+    .wrapper {
+        width: 100%;
+    }
+    header {
+        padding: 10px 70px;
+    }
+    main {
+        margin-top: 80px;
+        padding: 20px 15px;
+    }
+    .info_rules {
+        width: 100%;
+    }
+    .status {
+        margin: 20px auto 20px;
+    }
+    .control_top, .control_bottom {
+        width: 50%;
+    }
+    .btn__confirm {
+        width: 32%;
+    }
+}
