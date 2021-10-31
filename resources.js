@@ -1,7 +1,7 @@
 const arrControl = ['Играть', 'Об игре', 'Правила', 'Выход']
 const infoGame = document.querySelector('.question').innerText;
 
-const question1 = createQuestion('Сколько парадигм поддерживает JS ?',
+const question1 = createQuestion('Сколько парадигм программирования поддерживает JS ?',
 ' Одну', ' Две', ' Три', ' Четыре', 'Три' );
 const question2 = createQuestion('Как называется разработчик которий работает над клиентской стороной проекта?',
     ' BackEnd Dev',' Mobile Dev',' QA Engineer',' FrontEnd Dev','FrontEnd Dev' );
