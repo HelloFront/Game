@@ -1,8 +1,8 @@
 const arrControl = ['Играть', 'Об игре', 'Правила', 'Выход']
 const infoGame = document.querySelector('.question').innerText;
 
-const question1 = createQuestion('Какой язык является мультипарадигменным?',
-' C++', ' JavaScript', ' Python', ' Java', 'JavaScript' );
+const question1 = createQuestion('Сколько парадигм поддерживает JS ?',
+' Одну', ' Две', ' Три', ' Четыре', 'Три' );
 const question2 = createQuestion('Как называется разработчик которий работает над клиентской стороной проекта?',
     ' BackEnd Dev',' Mobile Dev',' QA Engineer',' FrontEnd Dev','FrontEnd Dev' );
 const question3 = createQuestion('С помощью какой команды можно остановить цикл for?',

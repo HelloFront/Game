@@ -3,6 +3,10 @@ const buttonContinue = document.querySelector('[data-continue]');
 const buttonExit = document.querySelector('[data-exit]');
 const buttonLose = document.querySelector('[data-lose]');
 
+buttonContinue.addEventListener('click', btnContinue);
+buttonExit.addEventListener('click', btnExit);
+buttonLose.addEventListener('click', btnLose);
+
 let body = document.querySelector('.body');
 let winWindow = document.querySelector('[data-win]');
 let loseWindow = document.querySelector('[data-lose]');
@@ -21,17 +25,19 @@ question = [...getRandomArr(question)];
 function startGame () {
     let arrAnswer = question[index].arrAnswer;
 
-    outStatus.innerText = 'Вопрос ' + (index+1) ;
-    outQuestion.innerText = question[index].question;
-
     for (let i = 0; i < button.length; i++) {
         button[i].innerText = arrAnswer[i];
         button[i].addEventListener('click', checkedAnswer);
-        button[i].classList.add('active');
+        button[i].classList.remove('active');
     }
+
+    outStatus.innerText = 'Вопрос ' + (index+1) ;
+    outQuestion.innerText = question[index].question;
 }
 
 function checkedAnswer () {
+    removeStyle();
+
     let x = this.innerText;
     if (x === question[index].trueAnswer) {
         index++
@@ -43,37 +49,8 @@ function checkedAnswer () {
         
         if (index === 15) {
             outBalanceWin.innerText = `Вы победитель и обладатель ${balance}$ Congratulations!`;
-
-            buttonContinue.addEventListener('click', function () {
-                winWindow.style = 'display: none';
-                body.style = 'opacity: 1';
-
-                gameOver();
-            });
-
-            buttonExit.addEventListener('click', function () {
-                winWindow.style = 'display: none';
-                body.style = 'opacity: 1';
-
-                gameOver();
-            });
-
         } else {
             outBalanceWin.innerText = `Вы выиграли ${balance}$`;
-
-            buttonContinue.addEventListener('click', function () {
-                winWindow.style = 'display: none';
-                body.style = 'opacity: 1';
-
-                startGame();
-            });
-
-            buttonExit.addEventListener('click', function () {
-                winWindow.style = 'display: none';
-                body.style = 'opacity: 1';
-
-                gameOver();
-            });
         }
 
     } else {
@@ -89,14 +66,10 @@ function checkedAnswer () {
         loseWindow.style = 'display: block';
         body.style = 'opacity: .2'
         
-        buttonLose.addEventListener('click', function () {
-            loseWindow.style = 'display: none';
-            body.style = 'opacity: 1';
-
-            gameOver();
-        });
     }
 }
+
+//----------------------- Function -----------------------------------
 
 function gameOver () {
     outStatus.innerText = 'Главное меню';
@@ -114,7 +87,6 @@ function gameOver () {
 }
 
 function countBalance () {
-
     if(index < 4) {
         balance += 100;
     } else if (index === 4) {
@@ -142,6 +114,32 @@ function checkedButton () {
         }
     }
 }
+
 function getRandomArr (arr) {
     arr.sort(() => Math.random() - 0.5);
+}
+
+function removeStyle () {
+    for (let i = 0; i < button.length; i++) {
+        button[i].classList.add('active');
+    }
+}
+
+function btnContinue () {
+    winWindow.style = 'display: none';
+    body.style = 'opacity: 1';
+
+    setTimeout(startGame, 100);
+}
+function btnExit () {
+    winWindow.style = 'display: none';
+    body.style = 'opacity: 1';
+
+    setTimeout(gameOver, 100);
+}
+function btnLose () {
+    loseWindow.style = 'display: none';
+    body.style = 'opacity: 1';
+
+    setTimeout(gameOver, 100);
 }

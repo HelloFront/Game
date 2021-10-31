@@ -23,6 +23,9 @@
     }
 }
 @media screen and (max-width: 420px) {
+    header {
+        padding: 10px 40px;
+    }
     .button_control {
         display: block;
         position: absolute;
@@ -57,5 +60,17 @@
     }
     .window {
         font-size: 25px;
+    }
+    main::before {
+        left: 14%;
+    }
+}
+@media screen and (max-width: 360px) {
+    header {
+        padding: 10px 20px;
+    }
+    main::before {
+        font-size: 15px;
+        left: 11%;
     }
 }
