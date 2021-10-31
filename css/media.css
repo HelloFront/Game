@@ -22,3 +22,40 @@
         width: 32%;
     }
 }
+@media screen and (max-width: 420px) {
+    .button_control {
+        display: block;
+        position: absolute;
+        top: 410px;
+        width: 100%;
+        left: 0;
+    }
+    .button_control::before, .button_control::after {
+        display: none;
+    }
+    .control_top, .control_bottom {
+        padding: 0;
+        width: 100%;
+    }
+    .button::after, .button::before {
+        display: none;
+    }
+    .button {
+        border: 3px solid #7d85a1;
+    }
+    .info_rules {
+        padding: 36px 10px;
+        border-radius: 6px;
+    }
+    .status {
+        font-size: 16px;
+        border-radius: 6px;
+    }
+    .btn__confirm {
+        width: 37%;
+        font-size: 18px;
+    }
+    .window {
+        font-size: 25px;
+    }
+}
