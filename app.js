@@ -16,9 +16,9 @@ let balance = 0;
 let index = 0;
 
 checkedButton();
+question = [...getRandomArr(question)];
 
 function startGame () {
-
     let arrAnswer = question[index].arrAnswer;
 
     outStatus.innerText = 'Вопрос ' + (index+1) ;
@@ -110,6 +110,7 @@ function gameOver () {
     
     index = 0;
     balance = 0;
+    question = [...getRandomArr(question)];
 }
 
 function countBalance () {
@@ -140,4 +141,7 @@ function checkedButton () {
             })
         }
     }
+}
+function getRandomArr (arr) {
+    arr.sort(() => Math.random() - 0.5);
 }
