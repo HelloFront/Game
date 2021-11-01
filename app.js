@@ -20,10 +20,11 @@ let balance = 0;
 let index = 0;
 
 checkedButton();
-question = [...getRandomArr(question)];
+let ask = [...getRandomArr(question)];
 
 function startGame () {
-    let arrAnswer = question[index].arrAnswer;
+
+    let arrAnswer = ask[index].arrAnswer;
 
     for (let i = 0; i < button.length; i++) {
         button[i].innerText = arrAnswer[i];
@@ -32,14 +33,14 @@ function startGame () {
     }
 
     outStatus.innerText = 'Вопрос ' + (index+1) ;
-    outQuestion.innerText = question[index].question;
+    outQuestion.innerText = ask[index].question;
 }
 
 function checkedAnswer () {
     removeStyle();
 
     let x = this.innerText;
-    if (x === question[index].trueAnswer) {
+    if (x === ask[index].trueAnswer) {
         index++
 
         winWindow.style = 'display: block';
@@ -83,7 +84,7 @@ function gameOver () {
     
     index = 0;
     balance = 0;
-    question = [...getRandomArr(question)];
+    ask = [...getRandomArr(question)];
 }
 
 function countBalance () {
@@ -116,7 +117,7 @@ function checkedButton () {
 }
 
 function getRandomArr (arr) {
-    arr.sort(() => Math.random() - 0.5);
+    return arr.sort(() => Math.random() - 0.5);
 }
 
 function removeStyle () {
