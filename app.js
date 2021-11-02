@@ -27,9 +27,14 @@ function startGame () {
     let arrAnswer = ask[index].arrAnswer;
 
     for (let i = 0; i < button.length; i++) {
+        if (isTouchDevice()) {
+            button[i].classList.remove('active');
+        } else {
+            button[i].classList.add('active');
+        }
+        
         button[i].innerText = arrAnswer[i];
         button[i].addEventListener('click', checkedAnswer);
-        button[i].classList.remove('active');
     }
 
     outStatus.innerText = 'Вопрос ' + (index+1) ;
@@ -144,3 +149,12 @@ function btnLose () {
 
     setTimeout(gameOver, 100);
 }
+function isTouchDevice() {
+    try {
+      document.createEvent('TouchEvent');
+      return true;
+    }
+    catch(e) {
+      return false;
+    }
+  }
