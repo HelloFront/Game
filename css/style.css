@@ -221,11 +221,17 @@ main::before {
 
 
 /*--- scale-money ----*/
-
-.scale__money__block {
+.main_block {
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     position: absolute;
     top: 13%;
-    right: 5%;
+    left: 0;
+}
+.scale__money__block {
     border: 4px solid #b0b5c7;
     border-radius: 3px;
     padding: 10px;
@@ -249,15 +255,9 @@ pre {
     transition: all .2s ease;
 }
 .window__score {
-    
-    width: 8%;
-    padding: 5px 0;
+    width: 7%;
     text-align: center;
-    position: absolute;
-    top: 40%;
-    left: 5%;
-   
-    display: none;
+    display: block;
 }
 .score__cash{
     border: 3px solid #7d85a1;
@@ -274,7 +274,7 @@ pre {
     text-align: center;
     border: 3px solid #7d85a1;
     border-radius: 8px;
-    display: none;
+    display: block;
 }
 .exit__button:hover {
     border-color: red;
