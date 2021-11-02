@@ -247,3 +247,18 @@ pre {
     border-radius: 3px;
     transition: all .4s linear;
 }
+.window__score{
+    background-color: rgb(10, 1, 58);
+    width: 8%;
+    height: 5%;
+    text-align: center;
+    margin-left: 5%;
+    position: absolute;
+    top: 62%;
+    border: 3px solid #7d85a1;
+    border-radius: 8px;
+    display: none;
+}
+.score__cash{
+   padding-top: 6%; 
+}
