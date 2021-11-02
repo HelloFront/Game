@@ -1,7 +1,10 @@
 const button = [...document.querySelectorAll('[data-button]')];
+const arrScaleItem = [...document.querySelectorAll('pre')]
 const buttonContinue = document.querySelector('[data-continue]');
 const buttonExit = document.querySelector('[data-exit]');
 const buttonLose = document.querySelector('[data-lose]');
+
+arrScaleItem.reverse();
 
 buttonContinue.addEventListener('click', btnContinue);
 buttonExit.addEventListener('click', btnExit);
@@ -46,24 +49,32 @@ function checkedAnswer () {
 
     let x = this.innerText;
     if (x === ask[index].trueAnswer) {
-        index++
+        
+        
+        
 
         winWindow.style = 'display: block';
         body.style = 'opacity: .2'
         
         balance = countBalance();
         
-        if (index === 15) {
+        if (index === 14) {
             outBalanceWin.innerText = `Вы победитель и обладатель ${balance}$ Congratulations!`;
         } else {
             outBalanceWin.innerText = `Вы выиграли ${balance}$`;
         }
+        for(let i = 0; i < arrScaleItem.length; i++) {
+            arrScaleItem[i].classList.remove('x');
+            arrScaleItem[index].classList.add('x');
+        }
+
+        index++
 
     } else {
 
-        if(index >= 5 && index < 10) {
+        if(index >= 4 && index < 9) {
             outBalanceLose.innerText = 'Вы выиграли 1000$';
-        } else if(index >= 10 && index < 15) {
+        } else if(index >= 9 && index < 14) {
             outBalanceLose.innerText = 'Вы выиграли 32000$';
         } else {
             outBalanceLose.innerText = 'Вы ничего не выиграли';
@@ -71,7 +82,6 @@ function checkedAnswer () {
 
         loseWindow.style = 'display: block';
         body.style = 'opacity: .2'
-        
     }
 }
 
@@ -90,6 +100,10 @@ function gameOver () {
     index = 0;
     balance = 0;
     ask = [...getRandomArr(question)];
+
+    for(let i = 0; i < arrScaleItem.length; i++) {
+        arrScaleItem[i].classList.remove('x')
+    }
 }
 
 function countBalance () {
