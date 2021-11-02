@@ -183,6 +183,7 @@ main::before {
 
 .window {
     width: 100%;
+    padding: 15px 20px;
 
     position: absolute;
     top: 320px;
@@ -192,24 +193,10 @@ main::before {
     display: none;
     text-align: center;
     transition: all .1s linear;
-}
-.window__win {
-    width: 100%;
-    padding: 15px 20px;
-
     background: url(https://kartinkin.net/uploads/posts/2021-07/thumbs/1626284727_21-kartinkin-com-p-fon-temno-sinii-gradient-krasivo-22.jpg);
     background-size: cover;
     border-top: 3px solid #7d85a1;
     border-bottom: 3px solid #7d85a1;
-}
-.window__lose {
-    margin: 0 auto;
-    width: 40%;
-    padding: 15px 20px;
-
-    background: url(https://kartinkin.net/uploads/posts/2021-07/thumbs/1626284727_21-kartinkin-com-p-fon-temno-sinii-gradient-krasivo-22.jpg);
-    background-position: center;
-    border: 8px solid rgb(17, 113, 177);
 }
 .btn__confirm {
     margin: 10px 0;
