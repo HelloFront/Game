@@ -130,7 +130,6 @@ function removeStyle () {
         button[i].classList.add('active');
     }
 }
-
 function btnContinue () {
     winWindow.style = 'display: none';
     body.style = 'opacity: 1';
