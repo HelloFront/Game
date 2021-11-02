@@ -37,8 +37,8 @@ function startGame () {
         button[i].addEventListener('click', checkedAnswer);
     }
 
-    outStatus.innerText = 'Вопрос ' + (index+1) ;
-    outQuestion.innerText = ask[index].question;
+    outStatus.innerText = ask[index].question;
+    outQuestion.innerText ='Вопрос ' + (index+1) ;
 }
 
 function checkedAnswer () {

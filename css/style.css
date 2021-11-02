@@ -72,6 +72,7 @@ main {
 
     width: 60%;
     line-height: 25px;
+    font-size: 30px;
     text-align: center;
     background: url(https://kartinkin.net/uploads/posts/2021-07/thumbs/1626284727_21-kartinkin-com-p-fon-temno-sinii-gradient-krasivo-22.jpg);
     background-size: cover;
@@ -90,12 +91,12 @@ main::before {
     border-radius: 8px;
 }
 .status {
-    margin: 60px auto 20px;
-    padding: 10px 20px;
+    margin: 60px auto 0;
+    padding: 10px 10px;
 
     width: 60%;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     background: url(https://st3.depositphotos.com/2777985/i/600/depositphotos_348321362-stock-photo-dark-blue-texture-chalk-board.jpg);
     border: 3px solid #7d85a1;
     border-radius: 20px;
