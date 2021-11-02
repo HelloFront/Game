@@ -32,8 +32,8 @@ if (isTouchDevice()) {
 }
 
 function startGame () {
-    btnExitGame.style = "display: block";
-    yourInformation.style = "display: block";
+    btnExitGame.style = "visibility: visible";
+    yourInformation.style = "visibility: visible";
 
     let arrAnswer = ask[index].arrAnswer;
 
@@ -111,7 +111,8 @@ function gameOver () {
         arrScaleItem[i].classList.remove('x')
     }
     yourBalanse.innerText = balance +'$';
-    yourInformation.style = "display: none";
+    yourInformation.style = "visibility: hidden";
+    btnExitGame.style = "visibility: hidden";
 }
 
 function countBalance () {
@@ -176,7 +177,7 @@ function isTouchDevice() {
   btnExitGame.onclick = function(){
     winWindow.style = 'display: none';
     body.style = 'opacity: 1';
-    btnExitGame.style = 'display: none';
+    btnExitGame.style = "visibility: hidden";
 
-    setTimeout(gameOver, 100);
+    gameOver();
   }

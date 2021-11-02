@@ -239,7 +239,7 @@ main::before {
     background-color: rgb(10, 1, 58);;
     color: rgb(71, 156, 163);
     transition: all .2s ease;
-    display: block;
+    visibility: visible;
 }
 pre {
     padding: 0 10px;
@@ -257,7 +257,7 @@ pre {
 .window__score {
     width: 7%;
     text-align: center;
-    display: block;
+    visibility: hidden;
 }
 .score__cash{
     border: 3px solid #7d85a1;
@@ -274,7 +274,6 @@ pre {
     text-align: center;
     border: 3px solid #7d85a1;
     border-radius: 8px;
-    display: block;
 }
 .exit__button:hover {
     border-color: red;
