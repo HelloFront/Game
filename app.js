@@ -15,6 +15,8 @@ let outStatus = document.querySelector('.status');
 let outQuestion = document.querySelector('.question');
 let outBalanceWin = document.querySelector('.out__money__win');
 let outBalanceLose = document.querySelector('.out__money__lose');
+let yourBalanse = document.querySelector('.score__cash');
+let yourInformation = document.querySelector('.window__score');
 
 let balance = 0;
 let index = 0;
@@ -23,6 +25,8 @@ checkedButton();
 let ask = [...getRandomArr(question)];
 
 function startGame () {
+
+    yourInformation.style = "display: block";
 
     let arrAnswer = ask[index].arrAnswer;
 
@@ -52,6 +56,7 @@ function checkedAnswer () {
         body.style = 'opacity: .2'
         
         balance = countBalance();
+        yourBalanse.innerText = balance + '$';
         
         if (index === 15) {
             outBalanceWin.innerText = `Вы победитель и обладатель ${balance}$ Congratulations!`;
@@ -90,6 +95,9 @@ function gameOver () {
     index = 0;
     balance = 0;
     ask = [...getRandomArr(question)];
+
+    yourBalanse.innerText = balance +'$';
+    yourInformation.style = "display: none";
 }
 
 function countBalance () {
@@ -157,3 +165,4 @@ function isTouchDevice() {
       return false;
     }
   }
+  console.log(yourBalanse.innerText)

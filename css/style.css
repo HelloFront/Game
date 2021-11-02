@@ -218,3 +218,18 @@ main::before {
 .btn__confirm:hover {
     border-color: rgb(255, 174, 0);
 }
+.window__score{
+    background-color: rgb(10, 1, 58);
+    width: 8%;
+    height: 5%;
+    text-align: center;
+    margin-left: 5%;
+    position: absolute;
+    top: 62%;
+    border: 3px solid #7d85a1;
+    border-radius: 8px;
+    display: none;
+}
+.score__cash{
+   padding-top: 6%; 
+}
