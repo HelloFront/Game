@@ -261,7 +261,7 @@ pre {
     border-radius: 3px;
     transition: all .2s ease;
 }
-.window__score{
+.window__score {
     background-color: rgb(10, 1, 58);
     width: 8%;
     padding: 5px 0;
@@ -272,4 +272,23 @@ pre {
     border: 3px solid #7d85a1;
     border-radius: 8px;
     display: none;
+}
+.score__cash{
+   padding-top: 6%; 
+}
+.exit__button {
+    background-color:rgb(10, 1, 58);
+    color:white;
+    width: 8%;
+    height: 5%;
+    margin-left: 5%;
+    text-align: center;
+    position: absolute;
+    top:50%;
+    border: 3px solid #7d85a1;
+    border-radius: 8px;
+    display: none;
+}
+.exit__button:hover {
+    border-color: red;
 }

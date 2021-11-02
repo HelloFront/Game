@@ -2,6 +2,7 @@ const button = [...document.querySelectorAll('[data-button]')];
 const arrScaleItem = [...document.querySelectorAll('pre')];
 const buttonExit = document.querySelector('[data-exit]');
 const buttonLose = document.querySelector('[data-lose]');
+const btnExitGame = document.querySelector('.exit__button');
 
 arrScaleItem.reverse();
 
@@ -31,7 +32,7 @@ if (isTouchDevice()) {
 }
 
 function startGame () {
-
+    btnExitGame.style = "display: block";
     yourInformation.style = "display: block";
 
     let arrAnswer = ask[index].arrAnswer;
@@ -171,4 +172,11 @@ function isTouchDevice() {
     catch(e) {
       return false;
     }
+  }
+  btnExitGame.onclick = function(){
+    winWindow.style = 'display: none';
+    body.style = 'opacity: 1';
+    btnExitGame.style = 'display: none';
+
+    setTimeout(gameOver, 100);
   }
