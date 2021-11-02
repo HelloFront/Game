@@ -1,18 +1,17 @@
 const button = [...document.querySelectorAll('[data-button]')];
-const arrScaleItem = [...document.querySelectorAll('pre')]
-const buttonContinue = document.querySelector('[data-continue]');
+const arrScaleItem = [...document.querySelectorAll('pre')];
 const buttonExit = document.querySelector('[data-exit]');
 const buttonLose = document.querySelector('[data-lose]');
 
 arrScaleItem.reverse();
 
-buttonContinue.addEventListener('click', btnContinue);
 buttonExit.addEventListener('click', btnExit);
 buttonLose.addEventListener('click', btnLose);
 
 let body = document.querySelector('.body');
 let winWindow = document.querySelector('[data-win]');
 let loseWindow = document.querySelector('[data-lose]');
+let scaleBlock = document.querySelector('.scale__money__block');
 
 let outStatus = document.querySelector('.status');
 let outQuestion = document.querySelector('.question');
@@ -26,6 +25,10 @@ let index = 0;
 
 checkedButton();
 let ask = [...getRandomArr(question)];
+
+if (isTouchDevice()) {
+    scaleBlock.style = "display: none";
+}
 
 function startGame () {
 
@@ -54,26 +57,23 @@ function checkedAnswer () {
     let x = this.innerText;
     if (x === ask[index].trueAnswer) {
         
-        
-        
-
-        winWindow.style = 'display: block';
-        body.style = 'opacity: .2'
-        
         balance = countBalance();
         yourBalanse.innerText = balance + '$';
         
         if (index === 14) {
+            winWindow.style = 'display: block';
+            body.style = 'opacity: .2'
             outBalanceWin.innerText = `Вы победитель и обладатель ${balance}$ Congratulations!`;
-        } else {
-            outBalanceWin.innerText = `Вы выиграли ${balance}$`;
-        }
+        } 
+
         for(let i = 0; i < arrScaleItem.length; i++) {
             arrScaleItem[i].classList.remove('x');
             arrScaleItem[index].classList.add('x');
         }
 
         index++
+
+        setTimeout(startGame, 100);
 
     } else {
 
@@ -114,15 +114,15 @@ function gameOver () {
 }
 
 function countBalance () {
-    if(index < 4) {
+    if(index < 3) {
         balance += 100;
-    } else if (index === 4) {
+    } else if (index === 3) {
         balance += 200;
-    } else if (index > 4 && index < 12) {
+    } else if (index > 3 && index < 11) {
         balance *= 2;
-    } else if (index === 12) {
+    } else if (index === 11) {
         balance = 125000;
-    } else if (index > 12 && index <= 15){
+    } else if (index > 11 && index <= 14){
         balance *= 2;
     }
 
@@ -150,12 +150,6 @@ function removeStyle () {
     for (let i = 0; i < button.length; i++) {
         button[i].classList.add('active');
     }
-}
-function btnContinue () {
-    winWindow.style = 'display: none';
-    body.style = 'opacity: 1';
-
-    setTimeout(startGame, 100);
 }
 function btnExit () {
     winWindow.style = 'display: none';
