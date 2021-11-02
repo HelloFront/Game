@@ -257,7 +257,7 @@ pre {
 .window__score {
     width: 7%;
     text-align: center;
-    visibility: hidden;
+    visibility: visible;
 }
 .score__cash{
     border: 3px solid #7d85a1;

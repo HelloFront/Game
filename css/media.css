@@ -70,6 +70,29 @@
     main::before {
         left: 14%;
     }
+    .scale__money__block {
+        display: none;
+    }
+    .window__score{
+        display: flex;
+        justify-content:space-between;
+        width: 100%;
+        align-items:center;
+    }
+    .main_block{
+        top: 59%;
+        left:0;
+        padding: 0 20px;
+    }
+    .score__cash {
+        width: 30%;
+        height: 36px;
+    }
+    .exit__button{
+        width: 30%;
+        padding: 7px 0;
+        margin-top:0;
+    }
 }
 @media screen and (max-width: 360px) {
     header {
