@@ -2,6 +2,7 @@ const button = [...document.querySelectorAll('[data-button]')];
 const buttonContinue = document.querySelector('[data-continue]');
 const buttonExit = document.querySelector('[data-exit]');
 const buttonLose = document.querySelector('[data-lose]');
+const btnExitGame = document.querySelector('.exit__button')
 
 buttonContinue.addEventListener('click', btnContinue);
 buttonExit.addEventListener('click', btnExit);
@@ -25,7 +26,7 @@ checkedButton();
 let ask = [...getRandomArr(question)];
 
 function startGame () {
-
+    btnExitGame.style = "display: block";
     yourInformation.style = "display: block";
 
     let arrAnswer = ask[index].arrAnswer;
@@ -165,4 +166,10 @@ function isTouchDevice() {
       return false;
     }
   }
-  console.log(yourBalanse.innerText)
+  btnExitGame.onclick = function(){
+    winWindow.style = 'display: none';
+    body.style = 'opacity: 1';
+    btnExitGame.style = 'display: none';
+
+    setTimeout(gameOver, 100);
+  }
