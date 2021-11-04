@@ -24,6 +24,7 @@ body {
 /* ----- Header ------ */
 
 header {
+    position: relative;
     padding: 5px 200px;
     background: radial-gradient(40% 50%, #341458, #1c003b);
     border-bottom: 1px solid rgb(0, 0, 0);
@@ -95,11 +96,20 @@ main::before {
     padding: 10px 10px;
 
     width: 60%;
+    position: relative;
     text-align: center;
     font-size: 20px;
     background: url(https://st3.depositphotos.com/2777985/i/600/depositphotos_348321362-stock-photo-dark-blue-texture-chalk-board.jpg);
     border: 3px solid #7d85a1;
     border-radius: 20px;
+    z-index: 20;
+}
+.button_position {
+    width: 100%;
+    position: absolute;
+    top: 460px;
+    left: 0;
+    z-index: 50;
 }
 .button_control {
     margin: 0 auto;
@@ -108,6 +118,23 @@ main::before {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.btn_control {
+    margin: 0 auto;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn_control::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 4px;
+    top: 46px;
+    background-color: #7d85a1;
+    z-index: 1;
 }
 .button_control::before {
     position: absolute;
@@ -153,6 +180,9 @@ main::before {
     border-radius: 3px;
     cursor: pointer;
     transition: all .2s linear;
+}
+.hidden {
+    display: none;
 }
 .active:hover {
     border-color: rgb(255, 174, 0);
@@ -277,4 +307,53 @@ pre {
 }
 .exit__button:hover {
     border-color: red;
+}
+
+
+
+/*----- Image ----- */
+.out_image_block {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    margin: 0 auto;
+    top: 100px;
+    visibility: hidden;
+}
+.out_image_person {
+    height: 326px; 
+    width: 300px;
+    margin: 0 10px;
+
+    padding-top: 20px;
+    border: 3px solid #7d85a1;
+    border-radius: 8px;
+    background-color: rgb(10, 1, 58);
+}
+.left {
+    height: 326px;
+}
+.right {
+    height: 326px;
+}
+img {
+    display: block;
+    margin: 0 auto;
+}
+.block_img {
+    display: none;
+}
+
+
+.out_user_person {
+    position: absolute;
+    inset: 0;
+    margin: 0 auto;
+    top: 130px;
+    left: 35%;
+    z-index: 1;
+}
+.control_person {
+    width: 70px;
 }

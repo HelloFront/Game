@@ -27,12 +27,13 @@
 }
 @media screen and (max-width: 420px) {
     header {
+        position: relative;
         padding: 10px 40px;
     }
     .button_control {
         display: block;
         position: absolute;
-        top: 410px;
+        top: 0;
         width: 100%;
         left: 0;
     }
@@ -90,10 +91,52 @@
         width: 30%;
         height: 36px;
     }
+    .out_image_block {
+        top: 100px;
+       width: 300px;
+       height: 300px;
+    }
     .exit__button{
         width: 30%;
         padding: 8px 0;
         margin-top: 0;
+    }
+    .out_user_person {
+        height: 200px;
+        top: 100px;
+        right: 0;
+    }
+    .out_image_person {
+        height: 176px;
+        width: 250px;
+        position: absolute;
+        inset: 0;
+        margin: 0 auto;
+    }
+    .control_person {
+        position: absolute;
+        top: 200px;
+        left: 0;
+        height: 50px;
+        width: 100px;
+    }
+    .right {
+        margin-left: 66%;
+    }
+    .width_person {
+        margin-right: 50px;
+        height: 200px;
+    }
+    .box_icon {
+        height: 150px;
+    }
+    .btn_control {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+    .btn_control::before {
+       display: none;
     }
 }
 @media screen and (max-width: 360px) {

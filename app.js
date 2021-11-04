@@ -16,6 +16,8 @@ let scaleBlock = document.querySelector('.scale__money__block');
 
 let outStatus = document.querySelector('.status');
 let outQuestion = document.querySelector('.question');
+let outUserPerson = document.querySelector('.out_user_person')
+let blockInfo = document.querySelector('main');
 let outBalanceWin = document.querySelector('.out__money__win');
 let outBalanceLose = document.querySelector('.out__money__lose');
 let yourBalanse = document.querySelector('.score__cash');
@@ -32,6 +34,7 @@ if (isTouchDevice()) {
 }
 
 function startGame () {
+
     btnExitGame.style = "visibility: visible";
     yourInformation.style = "visibility: visible";
 
@@ -40,16 +43,22 @@ function startGame () {
     for (let i = 0; i < button.length; i++) {
         if (isTouchDevice()) {
             button[i].classList.remove('active');
+            scaleBlock.style = "display: none";
         } else {
             button[i].classList.add('active');
         }
-        
-        button[i].innerText = arrAnswer[i];
+        button[i].onclick = null;
         button[i].addEventListener('click', checkedAnswer);
+        button[i].innerText = arrAnswer[i];
     }
-
     outStatus.innerText = ask[index].question;
-    outQuestion.innerText ='Вопрос ' + (index+1) ;
+    if (userPerson) {
+        blockInfo.style = 'visibility: hidden';
+        outUserPerson.append(userPerson);
+    } else {
+        outQuestion.innerText ='Вопрос ' + (index+1) ;
+    }
+    
 }
 
 function checkedAnswer () {
@@ -102,7 +111,8 @@ function gameOver () {
         button[i].innerText = arrControl[i];
         button[i].classList.remove('active')
     }
-    
+
+    item = 0;
     index = 0;
     balance = 0;
     ask = [...getRandomArr(question)];
@@ -113,6 +123,25 @@ function gameOver () {
     yourBalanse.innerText = balance +'$';
     yourInformation.style = "visibility: hidden";
     btnExitGame.style = "visibility: hidden";
+    scaleBlock.style = 'display: block';
+    mainBlock.style = 'display: block';
+    blockPerson.style = 'visibility: hidden';
+    buttonControlBlock.style = 'margin-top: 0px';
+
+    for(let i = 0; i < hiddenButton.length; i++) {
+        hiddenButton[i].classList.remove('hidden');
+    }
+    buttonControlBlock.classList.remove('btn_control');
+    buttonControlBlock.classList.add('button_control');
+
+    button[0].onclick = startGame;
+    button[1].onclick = null;
+    button[2].onclick = personStart;
+    button[3].onclick = gameOver;
+
+    if (isTouchDevice()) {
+        scaleBlock.style = "display: none";
+    }
 }
 
 function countBalance () {
@@ -154,16 +183,16 @@ function removeStyle () {
     }
 }
 function btnExit () {
+    setTimeout(gameOver, 100);
+
     winWindow.style = 'display: none';
     body.style = 'opacity: 1';
-
-    setTimeout(gameOver, 100);
 }
 function btnLose () {
+    setTimeout(gameOver, 100);
+
     loseWindow.style = 'display: none';
     body.style = 'opacity: 1';
-
-    setTimeout(gameOver, 100);
 }
 function isTouchDevice() {
     try {

@@ -1,5 +1,6 @@
-const arrControl = ['Играть', 'Об игре', 'Правила', 'Выход']
+const arrControl = ['Играть', 'Об игре', 'Персонаж', 'Выход']
 const infoGame = document.querySelector('.question').innerText;
+const imgSource = ["images/user1.png","images/user2.png","images/user3.png","images/user4.png","images/user5.png"]
 
 const question1 = createQuestion(' Сколько парадигм программирования поддерживает JS ?',
 ' Одну', ' Две', ' Три', ' Четыре', 'Три' );
