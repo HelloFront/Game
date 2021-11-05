@@ -120,13 +120,14 @@ function gameOver () {
     for(let i = 0; i < arrScaleItem.length; i++) {
         arrScaleItem[i].classList.remove('x')
     }
+    
     yourBalanse.innerText = balance +'$';
     yourInformation.style = "visibility: hidden";
     btnExitGame.style = "visibility: hidden";
     scaleBlock.style = 'display: block';
     mainBlock.style = 'display: block';
-    blockPerson.style = 'visibility: hidden';
     buttonControlBlock.style = 'margin-top: 0px';
+    blockPerson.style = 'display: none';
 
     for(let i = 0; i < hiddenButton.length; i++) {
         hiddenButton[i].classList.remove('hidden');

@@ -3,7 +3,7 @@ const imgPerson = document.querySelectorAll('.img');
 const iconPerson = document.querySelectorAll('.icon');
 const outPerson = document.querySelector('.out_image_person');
 const buttonControlBlock = document.querySelector('.button_control');
-const blockPerson = document.querySelector('.out_image_block');
+const blockPerson = document.querySelector('.main_block_person');
 const hiddenButton = document.querySelectorAll('.hidden_button');
 const buttonPerson = document.querySelectorAll('.control_person')
 
@@ -56,7 +56,7 @@ function personStart () {
 
     scaleBlock.style = 'display: none';
     mainBlock.style = 'display: none';
-    blockPerson.style = 'visibility: visible';
+    blockPerson.style = 'display: block';
 
     createIcon ();
 }

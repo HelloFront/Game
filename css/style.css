@@ -310,6 +310,9 @@ pre {
 }
 
 /*----- Image ----- */
+.main_block_person {
+    display: none;
+}
 .out_image_block {
     display: flex;
     justify-content: center;
@@ -317,7 +320,6 @@ pre {
     inset: 0;
     margin: 0 auto;
     top: 100px;
-    visibility: hidden;
 }
 .out_image_person {
     height: 326px; 
@@ -342,7 +344,6 @@ img {
 .block_img {
     display: none;
 }
-
 
 .out_user_person {
     position: absolute;
