@@ -5,6 +5,7 @@ const outPerson = document.querySelector('.out_image_person');
 const buttonControlBlock = document.querySelector('.button_control');
 const blockPerson = document.querySelector('.out_image_block');
 const hiddenButton = document.querySelectorAll('.hidden_button');
+const buttonPerson = document.querySelectorAll('.control_person')
 
 const leftButton = document.querySelector('.left');
 const rightButton = document.querySelector('.right');
@@ -12,12 +13,12 @@ const rightButton = document.querySelector('.right');
 let item = 0;
 let userPerson;
 
+
 leftButton.addEventListener('click', function () {
     if(item !== 0) {
         outPerson.append(img);
         item -= 1;
         createIcon();
-
     };
 });
 
@@ -28,11 +29,16 @@ rightButton.addEventListener('click', function () {
         createIcon();
     };
 });
-console.log(item);
+
 let img = document.createElement('img');
 let image = document.createElement('img');
 
 function personStart () {
+    if (!isTouchDevice()) {
+        for (let i of buttonPerson) {
+            i.classList.add('active')
+        }
+    }
     button[2].classList.remove('active');
 
     for(let i = 0; i < hiddenButton.length; i++) {
