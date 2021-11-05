@@ -311,7 +311,9 @@ pre {
 
 /*----- Image ----- */
 .main_block_person {
+    margin-left: 13%;
     display: none;
+    
 }
 .out_image_block {
     display: flex;
