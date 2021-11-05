@@ -304,6 +304,7 @@ pre {
     text-align: center;
     border: 3px solid #7d85a1;
     border-radius: 8px;
+    cursor: pointer;
 }
 .exit__button:hover {
     border-color: red;
