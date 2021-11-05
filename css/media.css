@@ -97,9 +97,9 @@
        height: 300px;
     }
     .exit__button{
+        margin: 0 auto;
         width: 30%;
         padding: 8px 0;
-        margin-top: 0;
     }
     .out_user_person {
         height: 200px;
@@ -117,7 +117,7 @@
         position: absolute;
         top: 200px;
         left: 0;
-        height: 50px;
+        height: 40px;
         width: 100px;
     }
     .right {
