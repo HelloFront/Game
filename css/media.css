@@ -9,6 +9,9 @@
         margin-top: 80px;
         padding: 20px 15px;
     }
+    .button {
+        width: 76%;
+    }
     .info_rules {
         width: 100%;
     }
@@ -48,6 +51,7 @@
         display: none;
     }
     .button {
+        width: 90%;
         border: 3px solid #7d85a1;
     }
     .info_rules {
@@ -150,6 +154,13 @@
     }
     .btn_control::before {
        display: none;
+    }
+    .placeholder {
+        display: none;
+    }
+    .name_person {
+        top: 318px;
+        z-index: 52;
     }
 }
 @media screen and (max-width: 360px) {
