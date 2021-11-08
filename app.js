@@ -112,7 +112,6 @@ function gameOver () {
         button[i].classList.remove('active')
     }
 
-    item = 0;
     index = 0;
     balance = 0;
     ask = [...getRandomArr(question)];

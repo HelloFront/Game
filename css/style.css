@@ -317,15 +317,19 @@ pre {
     
 }
 .out_image_block {
+    height: 226px;
     display: flex;
     justify-content: center;
     position: absolute;
+    align-items: center;
     inset: 0;
     margin: 0 auto;
     top: 100px;
+
+    z-index: 50;
 }
 .out_image_person {
-    height: 326px; 
+    height: 226px; 
     width: 300px;
     margin: 0 10px;
 
@@ -334,11 +338,13 @@ pre {
     border-radius: 8px;
     background-color: rgb(10, 1, 58);
 }
-.left {
-    height: 326px;
+.left svg {
+    width: 50px;
+    height: 50px;
 }
-.right {
-    height: 326px;
+.right svg {
+    width: 50px;
+    height: 50px;
 }
 img {
     display: block;
@@ -355,15 +361,4 @@ img {
     top: 130px;
     left: 35%;
     z-index: 1;
-}
-.control_person {
-    width: 70px;
-    background: url(https://st3.depositphotos.com/2777985/i/600/depositphotos_348321362-stock-photo-dark-blue-texture-chalk-board.jpg);
-    color: #e2e2e2;
-    border: none;
-    border-top: 3px solid #7d85a1;
-    border-bottom: 3px solid #7d85a1;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: all .2s linear;
 }

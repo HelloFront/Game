@@ -7,8 +7,8 @@ const blockPerson = document.querySelector('.main_block_person');
 const hiddenButton = document.querySelectorAll('.hidden_button');
 const buttonPerson = document.querySelectorAll('.control_person')
 
-const leftButton = document.querySelector('.left');
-const rightButton = document.querySelector('.right');
+const leftButton = document.querySelector('.left > svg');
+const rightButton = document.querySelector('.right > svg');
 
 let item = 0;
 let userPerson;
@@ -63,7 +63,7 @@ function personStart () {
 
 function createIcon () {
     img.src = iconPerson[item].alt;
-    img.height = 300;
+    img.height = 200;
     img.classList.add('box_icon');
 
     outPerson.append(img);
