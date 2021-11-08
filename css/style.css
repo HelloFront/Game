@@ -387,6 +387,7 @@ input {
     font-size: 23px;
     outline: none;
     border: 2px solid #000;
+    border-radius: 3px;
 }
 .placeholder {
     padding: 0 10px;
