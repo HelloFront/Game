@@ -338,13 +338,16 @@ pre {
     border-radius: 8px;
     background-color: rgb(10, 1, 58);
 }
-.left svg {
+.left svg, .right svg {
     width: 50px;
     height: 50px;
-}
-.right svg {
-    width: 50px;
-    height: 50px;
+
+    padding: 4px 5px;
+    fill: rgba(255, 255, 255, 0.795);
+    background-color: rgba(255, 255, 255, 0.315);
+    transition: all .3s linear;
+    border: 1px solid;
+    border-radius: 3px;
 }
 img {
     display: block;
