@@ -211,3 +211,21 @@ function isTouchDevice() {
 
     gameOver();
   }
+const modalButton =document.querySelector("#modal-window");
+modalButton.addEventListener("click",function(){
+    let modal = document.querySelector(".modal").style.display= "block";
+    const closebtn = createElement("button");
+    closebtn.textContent="x";
+    closebtn.classList.add("close__modal")
+    closebtn.addEventListener("click", closemodal())
+    div.append(closebtn)
+
+})
+
+function closemodal(){
+ let modal = document.getElementById('modal-dialog');
+   modal.style.display = 'none';
+  
+  }
+  
+
