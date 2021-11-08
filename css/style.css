@@ -394,4 +394,38 @@ input {
     position: absolute;
     top: 10px;
     left: 7%;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.modal {
+    display: none;
+    width: 50%;
+    position: fixed;
+    left: 25%;
+    background-color:#1c003b;
+    z-index: 999999999999;
+    height: 100px;
+    overflow:auto;
+    box-shadow: 50px 50px 100px #1c003b;
+}
+.modal__info {
+    margin: 4%;
+    text-align: center;
+}
+.header__modal {
+    display:flex;
+    margin-top:10px;
+}
+h3 {
+    text-align:center;
+    margin-left: 45%;
+}
+.close {
+    background-color:#e2e2e2;
+    padding:0 4px;
+    color:rgb(20, 2, 61)
+}
+.close:hover {
+    color:red;
 }

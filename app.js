@@ -210,3 +210,16 @@ function isTouchDevice() {
 
     gameOver();
   }
+  let modal = document.querySelector(".modal");
+const modalButton =document.querySelector("#modal-window");
+modalButton.addEventListener("click",function(){
+    let modal = document.querySelector(".modal").style.display= "block";
+    
+})
+
+let span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+
