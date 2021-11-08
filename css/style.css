@@ -368,3 +368,11 @@ img {
     left: 35%;
     z-index: 1;
 }
+
+.name_person {
+    width: auto;
+    height: 0;
+    position: absolute; 
+    inset: 0;
+    margin: 0 auto;
+}
