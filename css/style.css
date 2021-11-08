@@ -391,8 +391,11 @@ h3 {
     text-align:center;
     margin-left: 45%;
 }
-#close__modal{
-    display:block;
-    margin-left:30%;
-    padding:0 6px;
+.close{
+    background-color:#e2e2e2;
+    padding:0 4px;
+    color:rgb(20, 2, 61)
+}
+.close:hover{
+    color:red;
 }
