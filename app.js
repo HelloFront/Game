@@ -110,9 +110,9 @@ function checkedAnswer () {
 //----------------------- Function -----------------------------------
 
 function gameOver () {
-    if(inputName.value !== '') {
-        outNamePerson.innerText = `I'm ${inputName.value}`;
-    } else outNamePerson.style.visibility = 'hidden';
+    if(userName !== '') {
+        outNamePerson.innerText = `I'm ${userName}`;
+    }
 
     outStatus.innerText = 'Главное меню';
     outQuestion.innerText = infoGame;

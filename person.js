@@ -14,7 +14,7 @@ const rightButton = document.querySelector('.right > svg');
 
 let item = 0;
 let userPerson;
-
+let userName;
 
 leftButton.addEventListener('click', function () {
     if(item !== 0) {
@@ -36,6 +36,10 @@ let img = document.createElement('img');
 let image = document.createElement('img');
 
 function personStart () {
+    if(userName !== undefined) {
+        inputName.value = userName;
+    }
+    
     outNamePerson.innerText = "I'm ";
 
     if (!isTouchDevice()) {
@@ -78,9 +82,10 @@ function saveSettings () {
     image.classList.add('width_person')
 
     userPerson = image;
+    userName = inputName.value;
 
-    if(inputName.value !== '') {
-        outNamePerson.innerText += inputName.value;
+    if(userName !== '') {
+        outNamePerson.innerText += userName;
         outNamePerson.style.visibility = 'visible';
     } else outNamePerson.style.visibility = 'hidden';
     gameOver();
