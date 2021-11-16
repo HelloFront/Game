@@ -6,6 +6,8 @@ const buttonControlBlock = document.querySelector('.button_control');
 const blockPerson = document.querySelector('.main_block_person');
 const hiddenButton = document.querySelectorAll('.hidden_button');
 const buttonPerson = document.querySelectorAll('.control_person')
+const inputName = document.querySelector('.name_person > input');
+const outNamePerson = document.querySelector('.out_name_person');
 
 const leftButton = document.querySelector('.left > svg');
 const rightButton = document.querySelector('.right > svg');
@@ -34,6 +36,8 @@ let img = document.createElement('img');
 let image = document.createElement('img');
 
 function personStart () {
+    outNamePerson.innerText = "I'm ";
+
     if (!isTouchDevice()) {
         for (let i of buttonPerson) {
             i.classList.add('active')
@@ -74,5 +78,10 @@ function saveSettings () {
     image.classList.add('width_person')
 
     userPerson = image;
+
+    if(inputName.value !== '') {
+        outNamePerson.innerText += inputName.value;
+        outNamePerson.style.visibility = 'visible';
+    } else outNamePerson.style.visibility = 'hidden';
     gameOver();
 }

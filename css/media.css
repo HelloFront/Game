@@ -163,6 +163,9 @@
         top: 318px;
         z-index: 52;
     }
+    .out_name_person {
+        margin-left: 0;
+    }
 }
 @media screen and (max-width: 360px) {
     header {

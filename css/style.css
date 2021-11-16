@@ -354,6 +354,9 @@ pre {
 }
 img {
     display: block;
+}
+.box_icon {
+    display: block;
     margin: 0 auto;
 }
 .block_img {
@@ -369,7 +372,24 @@ img {
     z-index: 1;
     display: none;
 }
-
+.width_person {
+    padding-top: 50px;
+}
+.inner_image_block {
+    display: flex;
+}
+.out_name_person {
+    margin-left: 25%;
+    font-size: 18px;
+    min-width: 100px;
+    line-height: 90px;
+    padding: 0 20px;
+    color: #000;
+    background-image: url(/images/pngwing.com.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    visibility: hidden;
+}
 .name_person {
     width: 300px;
     height: 0;

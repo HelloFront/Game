@@ -17,7 +17,8 @@ let scaleBlock = document.querySelector('.scale__money__block');
 
 let outStatus = document.querySelector('.status');
 let outQuestion = document.querySelector('.question');
-let outUserPerson = document.querySelector('.out_user_person')
+let outUserPersonBlock = document.querySelector('.out_user_person');
+let outUserPersonImage = document.querySelector('.inner_image_block');
 let blockInfo = document.querySelector('main');
 let outBalanceWin = document.querySelector('.out__money__win');
 let outBalanceLose = document.querySelector('.out__money__lose');
@@ -60,8 +61,8 @@ function startGame () {
     outStatus.innerText = ask[index].question;
     if (userPerson) {
         blockInfo.style = 'visibility: hidden';
-        outUserPerson.style.display = 'block'
-        outUserPerson.append(userPerson);
+        outUserPersonBlock.style.display = 'block'
+        outUserPersonImage.append(userPerson);
     } else {
         outQuestion.innerText ='Вопрос ' + (index+1) ;
     }
