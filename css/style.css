@@ -367,6 +367,7 @@ img {
     top: 130px;
     left: 35%;
     z-index: 1;
+    display: none;
 }
 
 .name_person {
@@ -398,14 +399,20 @@ input {
     transition: all .2s linear;
 }
 
-.modal {
+.about_game_block {
+    width: 60%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
     display: none;
-    width: 50%;
-    position: fixed;
-    left: 25%;
+}
+.modal {
+    margin-left: 24px;
+    width: 90%;
     background-color:#1c003b;
-    z-index: 999999999999;
-    height: 100px;
+    z-index: 50;
+    height: 300px;
     overflow:auto;
     box-shadow: 50px 50px 100px #1c003b;
 }
@@ -422,10 +429,18 @@ h3 {
     margin-left: 45%;
 }
 .close {
-    background-color:#e2e2e2;
-    padding:0 4px;
-    color:rgb(20, 2, 61)
+    color:rgb(20, 2, 61);
+    z-index: 51;
+}
+.close > svg {
+    fill: rgb(171, 170, 172);
+    border-radius: 3px;
+}
+.close > svg > path:hover {
+    fill: rgb(92, 67, 150);
+    transition: all .2s linear;
 }
 .close:hover {
+    cursor: pointer;
     color:red;
 }

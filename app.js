@@ -54,11 +54,11 @@ function startGame () {
     outStatus.innerText = ask[index].question;
     if (userPerson) {
         blockInfo.style = 'visibility: hidden';
+        outUserPerson.style.display = 'block'
         outUserPerson.append(userPerson);
     } else {
         outQuestion.innerText ='Вопрос ' + (index+1) ;
     }
-    
 }
 
 function checkedAnswer () {
@@ -214,7 +214,6 @@ function isTouchDevice() {
 const modalButton =document.querySelector("#modal-window");
 modalButton.addEventListener("click",function(){
     let modal = document.querySelector(".modal").style.display= "block";
-    
 })
 
 let span = document.getElementsByClassName("close")[0];
