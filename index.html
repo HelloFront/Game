@@ -61,7 +61,7 @@
             <div class="button_control">
                 <div class="control_top">
                     <button class="button" onclick="setTimeout(startGame, 100)" data-button>Играть</button>
-                    <button class="button hidden_button" data-button id = "modal-window">Об игре</button>
+                    <button class="button hidden_button" data-button onclick="openModal()">Об игре</button>
                 </div>
                 <div class="control_bottom">
                     <button class="button" onclick="setTimeout(personStart, 100)" data-button>Персонаж</button>
@@ -123,18 +123,12 @@
         <img src="images/icon/icon4.png" alt="images/icon/icon4.png" class="icon">
         <img src="images/icon/icon5.png" alt="images/icon/icon5.png" class="icon">
     </div>
-    
         <div class ="modal" id ="modal-dialog">
             <div class= "header__modal">
                 <h3>Об игре</h3>
-                
             </div>
-            
-            <p class ="modal__info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero voluptates placeat, error dolore a velit explicabo assumenda in repellat deleniti alias quia blanditiis reiciendis pariatur. Consectetur consequuntur ipsa tenetur suscipit!
-               
-            </p>
+            <p class ="modal__info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero voluptates placeat, error dolore a velit explicabo assumenda in repellat deleniti alias quia blanditiis reiciendis pariatur. Consectetur consequuntur ipsa tenetur suscipit! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati necessitatibus dicta illo ea doloremque earum autem placeat facere blanditiis corrupti neque eveniet, ex ducimus possimus soluta facilis aliquam? Nemo, quo.</p>
             <span class="close">&times;</span>
-    
     </div>
     <script src="person.js"></script>
     <script src="resources.js"></script>

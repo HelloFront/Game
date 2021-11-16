@@ -269,7 +269,7 @@ main::before {
     background-color: rgb(10, 1, 58);;
     color: rgb(71, 156, 163);
     transition: all .2s ease;
-    visibility: visible;
+    visibility: hidden;
 }
 pre {
     padding: 0 10px;
@@ -403,9 +403,10 @@ input {
     width: 50%;
     position: fixed;
     left: 25%;
+    top: 25%;
     background-color:#1c003b;
     z-index: 999999999999;
-    height: 100px;
+    height: 300px;
     overflow:auto;
     box-shadow: 50px 50px 100px #1c003b;
 }

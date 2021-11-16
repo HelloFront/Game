@@ -3,6 +3,8 @@ const arrScaleItem = [...document.querySelectorAll('pre')];
 const buttonExit = document.querySelector('[data-exit]');
 const buttonLose = document.querySelector('[data-lose]');
 const btnExitGame = document.querySelector('.exit__button');
+let modal = document.querySelector(".modal");
+const modalButton =document.querySelector("#modal-window");
 
 arrScaleItem.reverse();
 
@@ -22,6 +24,7 @@ let outBalanceWin = document.querySelector('.out__money__win');
 let outBalanceLose = document.querySelector('.out__money__lose');
 let yourBalanse = document.querySelector('.score__cash');
 let yourInformation = document.querySelector('.window__score');
+let span = document.getElementsByClassName("close")[0];
 
 let balance = 0;
 let index = 0;
@@ -37,8 +40,12 @@ function startGame () {
 
     btnExitGame.style = "visibility: visible";
     yourInformation.style = "visibility: visible";
+    scaleBlock.style="visibility: visible";
+  
+   
 
     let arrAnswer = ask[index].arrAnswer;
+    
 
     for (let i = 0; i < button.length; i++) {
         if (isTouchDevice()) {
@@ -135,7 +142,7 @@ function gameOver () {
     buttonControlBlock.classList.add('button_control');
 
     button[0].onclick = startGame;
-    button[1].onclick = null;
+    button[1].onclick = openModal;
     button[2].onclick = personStart;
     button[3].onclick = gameOver;
 
@@ -207,17 +214,15 @@ function isTouchDevice() {
     winWindow.style = 'display: none';
     body.style = 'opacity: 1';
     btnExitGame.style = "visibility: hidden";
-
+   
     gameOver();
   }
-  let modal = document.querySelector(".modal");
-const modalButton =document.querySelector("#modal-window");
-modalButton.addEventListener("click",function(){
-    let modal = document.querySelector(".modal").style.display= "block";
-    
-})
+ 
 
-let span = document.getElementsByClassName("close")[0];
+function openModal(){
+    let modal = document.querySelector(".modal").style.display= "block";
+}
+
 span.onclick = function() {
     modal.style.display = "none";
   }
