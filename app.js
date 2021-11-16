@@ -221,11 +221,16 @@ function isTouchDevice() {
 function openModal(){
     modal.style.visibility = 'visible';
     span.style.display = 'block';
+    button.forEach(e => {e.onclick= null})
 };
 
 span.onclick = function() {
     modal.style.visibility = 'hidden';
     span.style.display = 'none';
+    button[0].onclick = startGame;
+    button[1].onclick = openModal;
+    button[2].onclick = personStart;
+    button[3].onclick = gameOver;
 }
 
 
