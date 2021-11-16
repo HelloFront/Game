@@ -385,7 +385,7 @@ img {
     line-height: 90px;
     padding: 0 20px;
     color: #000;
-    background-image: url(/images/pngwing.com.png);
+    background-image: url(../images/pngwing.com.png);
     background-size: contain;
     background-repeat: no-repeat;
     visibility: hidden;
