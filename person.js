@@ -83,7 +83,7 @@ function saveSettings () {
     userName = inputName.value;
 
     if(userName !== '') {
-        outNamePerson.innerText += userName;
+        outNamePerson.innerText = userName;
         outNamePerson.style.visibility = 'visible';
     } else outNamePerson.style.visibility = 'hidden';
     gameOver();
