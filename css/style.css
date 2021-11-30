@@ -103,6 +103,7 @@ main::before {
     border: 3px solid #7d85a1;
     border-radius: 20px;
     z-index: 20;
+    color: #ffffffcf;
 }
 .button_position {
     width: 100%;
@@ -368,27 +369,30 @@ img {
     inset: 0;
     margin: 0 auto;
     top: 130px;
-    left: 35%;
+    left: 30%;
     z-index: 1;
     display: none;
 }
 .width_person {
+    width: 100%;
     padding-top: 50px;
 }
 .inner_image_block {
-    display: flex;
+    position: relative;
+    margin: 0 auto;
+    width: 130px;
 }
-.out_name_person {
-    margin-left: 25%;
-    font-size: 18px;
-    min-width: 100px;
-    line-height: 90px;
-    padding: 0 20px;
-    color: #000;
-    background-image: url(../images/pngwing.com.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    visibility: hidden;
+.out_name {
+    text-align: center;
+    width: 100px;
+    position: absolute;
+    top: 227px;
+    left: 50%;
+    margin-left: -50px;
+    color: white;
+    background-color: rgb(11 15 15 / 81%);
+    border: 2px solid rgb(184 181 220 / 68%);
+    border-radius: 4px;
 }
 .name_person {
     width: 300px;
@@ -431,24 +435,25 @@ input {
 }
 .modal {
     margin-left: 24px;
+    padding: 10px;
     width: 90%;
     background-color:#1c003b;
     z-index: 50;
     height: 300px;
     overflow:auto;
     box-shadow: 50px 50px 100px #1c003b;
+    border: 3px solid #7d85a1;;
+    border-radius: 4px;
 }
 .modal__info {
     margin: 4%;
     text-align: center;
 }
 .header__modal {
-    display:flex;
     margin-top:10px;
 }
 h3 {
-    text-align:center;
-    margin-left: 45%;
+    text-align: center;
 }
 .close {
     color:rgb(20, 2, 61);

@@ -7,7 +7,7 @@ const blockPerson = document.querySelector('.main_block_person');
 const hiddenButton = document.querySelectorAll('.hidden_button');
 const buttonPerson = document.querySelectorAll('.control_person')
 const inputName = document.querySelector('.name_person > input');
-const outNamePerson = document.querySelector('.out_name_person');
+const outNamePerson = document.querySelector('.out_name');
 
 const leftButton = document.querySelector('.left > svg');
 const rightButton = document.querySelector('.right > svg');
@@ -40,8 +40,6 @@ function personStart () {
         inputName.value = userName;
     }
     
-    outNamePerson.innerText = "I'm ";
-
     if (!isTouchDevice()) {
         for (let i of buttonPerson) {
             i.classList.add('active')

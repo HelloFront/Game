@@ -98,8 +98,8 @@
     }
     .out_image_block {
         top: 100px;
-       width: 300px;
-       height: 300px;
+        width: 300px;
+        height: 300px;
     }
     .exit__button{
         margin: 0;
@@ -163,8 +163,19 @@
         top: 318px;
         z-index: 52;
     }
-    .out_name_person {
-        margin-left: 0;
+    .inner_image_block {
+        width: 100px;
+    }
+    .out_name {
+        width: 80px;
+        top: 143px;
+        margin-left: -40px;
+    }
+    .about_game_block {
+        width: 340px;
+        top: 350px;
+        left: 50%;
+        margin-left: -170px;
     }
 }
 @media screen and (max-width: 360px) {
